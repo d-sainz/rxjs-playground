@@ -1,0 +1,15 @@
+{
+  "name": "rxjs-playground",
+  "version": "1.0.0",
+  "description": "A simple repl wrapper to play with RxJS, with some code examples.",
+  "main": "rxjs-playground.mjs",
+  "scripts": {
+    "start": "node rxjs-playground.mjs"
+  },
+  "keywords": ["rxjs", "repl", "playground"],
+  "author": "diego.sainzdemedranootero@telefonica.com",
+  "license": "Public domain",
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  }
+}
