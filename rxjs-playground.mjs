@@ -1,5 +1,4 @@
 import * as repl from 'repl';
-import * as rxjs from 'rxjs';
 import {
   ArgumentOutOfRangeError,
   AsyncSubject,
@@ -139,12 +138,12 @@ import {
   zipAll,
   zipWith
 } from 'rxjs';
+import { subscribeAndLog } from './utils.mjs';
 
 console.log('Imported all non-deprecated rxjs exported members. Initializing REPL...');
 
 const server = repl.start({ prompt: '> ', useGlobal: true });
 
-server.context.rxjs = rxjs;
 /* Observable */
 server.context.Observable = Observable;
 server.context.animationFrames = animationFrames;
@@ -301,5 +300,7 @@ server.context.windowWhen = windowWhen;
 server.context.withLatestFrom = withLatestFrom;
 server.context.zipAll = zipAll;
 server.context.zipWith = zipWith;
+
+server.context.subscribeAndLog = subscribeAndLog;
 
 export { server };
