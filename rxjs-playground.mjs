@@ -138,6 +138,8 @@ import {
   zipAll,
   zipWith
 } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { fromFetch } from 'rxjs/fetch';
 import { subscribeAndLog } from './utils.mjs';
 
 console.log('Imported all non-deprecated rxjs exported members. Initializing REPL...');
@@ -179,6 +181,10 @@ server.context.ObjectUnsubscribedError = ObjectUnsubscribedError;
 server.context.SequenceError = SequenceError;
 server.context.TimeoutError = TimeoutError;
 server.context.UnsubscriptionError = UnsubscriptionError;
+
+/* Fetch API */
+server.context.ajax = ajax;
+server.context.fromFetch = fromFetch;
 
 /* Static observable creation exports */
 server.context.bindCallback = bindCallback;
